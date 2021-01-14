@@ -1,6 +1,6 @@
 class Api::ProductsController < ApplicationController
-  def product_action
-    @message = "sanity check"
-    render "single_product.json.jb"
+  def all_products_action
+    @products = Product.all
+    render "all_products.json.jb"
   end
 end
